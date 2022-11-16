@@ -32,6 +32,11 @@ body {
   align-items: center;
 }
 
+#home-page-link{
+  color: #3c4cff;
+  align-items: center;
+}
+
 #login-error-msg {
   width: 23%;
   text-align: center;
@@ -79,4 +84,8 @@ body {
   background-color: #3a3a3a;
   cursor: pointer;
   outline: none;
+}
+
+footer{
+
 }
