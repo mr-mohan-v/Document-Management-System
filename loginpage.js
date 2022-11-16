@@ -8,14 +8,14 @@ loginButton.addEventListener("click", (e) => {
     const password = loginForm.password.value;
 
     if (username === "student" && password === "studentpass") {
-        window.location.replace("https://mohanv2030.github.io/dms/student.html");
-        alert("You have successfully logged in.");
+        location.replace("https://mohanv2030.github.io/dms/student.html");
+        prompt("You have successfully logged in.");
     }
     else if (username === "teacher" && password === "teacherpass") {
-        alert("You have successfully logged in.");
-        window.location.replace("https://mohanv2030.github.io/dms/teacher.html");
+        prompt("You have successfully logged in.");
+        location.replace("https://mohanv2030.github.io/dms/teacher.html");
     }
     else {
-        alert("Invalid username and/or password");
+        prompt("Invalid username and/or password");
     }
 })
