@@ -9,13 +9,13 @@ loginButton.addEventListener("click", (e) => {
 
     if (username === "student" && password === "studentpass") {
         location.replace("https://mohanv2030.github.io/dms/student.html");
-        prompt("You have successfully logged in.");
+        alert("You have successfully logged in.");
     }
     else if (username === "teacher" && password === "teacherpass") {
-        prompt("You have successfully logged in.");
+        alert("You have successfully logged in.");
         location.replace("https://mohanv2030.github.io/dms/teacher.html");
     }
     else {
-        prompt("Invalid username and/or password");
+        alert("Invalid username and/or password");
     }
 })
