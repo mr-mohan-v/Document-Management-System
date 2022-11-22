@@ -1,0 +1,30 @@
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #d1cccc;
+}
+
+#main-holder {
+  width: 90%;
+  height: 90%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0px 0px 5px 2px black;
+}
+
+#login-page-link{
+  color: #3c4cff;
+  align-items: center;
+}
