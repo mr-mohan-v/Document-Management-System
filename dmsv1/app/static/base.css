@@ -13,8 +13,8 @@ body {
 }
 
 #main-holder {
-  width: 98%;
-  height: 98%;
+  width: 90%;
+  height: 90%;
   display: grid;
   justify-items: center;
   align-items: center;
@@ -22,15 +22,6 @@ body {
   border-radius: 7px;
   box-shadow: 0px 0px 5px 2px black;
 }
-
-.nav-list {
-    text-align: justify;
-    font-weight: bold;
-    font-size:1.5vw;
-    padding: 0vw 10vw 0vw 10vw;
-    background: linear-gradient(90deg, Thistle, white, Thistle);
-}
-
 
 #login-form {
   align-self: flex-start;
@@ -61,4 +52,3 @@ body {
   cursor: pointer;
   outline: none;
 }
-
