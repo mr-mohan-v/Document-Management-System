@@ -80,8 +80,7 @@ class RegistrationForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
     role = SelectField('Role', choices=[('High'), ('Low'), ('None')])
     password = PasswordField('Password', validators=[DataRequired()])
-    password2 = PasswordField(
-        'Confirm Password', validators=[DataRequired(), EqualTo('password')])
+    password2 = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
     submit = SubmitField('Register')
 
     def validate_username(self, username):
@@ -148,7 +147,7 @@ def register():
     form = RegistrationForm()
     roles = ['High','Low','None']
     if form.validate_on_submit():
-        user = User(username=form.username.data, email=form.email.data)
+        user = User(username=form.username.data, email=form.email.data,role = form.role.data)
         user.set_password(form.password.data)
         db.session.add(user)
         db.session.commit()
