@@ -2,7 +2,7 @@
 from flask_wtf import FlaskForm
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, \
     Length
-from wtforms import StringField, PasswordField, BooleanField, SubmitField, \
+from wtforms import StringField, SelectField, PasswordField, BooleanField, SubmitField, \
     TextAreaField
 from werkzeug.urls import url_parse
 from flask_login import login_user, logout_user, current_user, login_required
@@ -31,6 +31,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True)
+    role = db.Column(db.String(64), unique=False)
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
     posts = db.relationship('Post', backref='author', lazy='dynamic')
@@ -77,6 +78,7 @@ class LoginForm(FlaskForm):
 class RegistrationForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     email = StringField('Email', validators=[DataRequired(), Email()])
+    role = SelectField('Role', choices=[('High'), ('Low'), ('None')])
     password = PasswordField('Password', validators=[DataRequired()])
     password2 = PasswordField(
         'Confirm Password', validators=[DataRequired(), EqualTo('password')])
@@ -95,6 +97,7 @@ class RegistrationForm(FlaskForm):
 
 class EditProfileForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
+    role = SelectField('Role', choices=[('High'), ('Low'), ('None')])
     about_me = TextAreaField('About me', validators=[Length(min=0, max=140)])
     submit = SubmitField('Submit')
 
@@ -143,6 +146,7 @@ def register():
     if current_user.is_authenticated:
         return redirect(url_for('index'))
     form = RegistrationForm()
+    roles = ['High','Low','None']
     if form.validate_on_submit():
         user = User(username=form.username.data, email=form.email.data)
         user.set_password(form.password.data)
@@ -150,7 +154,7 @@ def register():
         db.session.commit()
         flash('Congratulations, you are now a registered user!')
         return redirect(url_for('login'))
-    return render_template('register.html', title='Register', form=form)
+    return render_template('register.html', title='Register', form=form, roles=roles)
 
 
 @app.route('/user/<username>')
@@ -166,12 +170,14 @@ def edit_profile():
     form = EditProfileForm()
     if form.validate_on_submit():
         current_user.username = form.username.data
+        current_user.role = form.role.data
         current_user.about_me = form.about_me.data
         db.session.commit()
         flash('Your changes have been saved.')
         return redirect(url_for('edit_profile'))
     elif request.method == 'GET':
         form.username.data = current_user.username
+        form.role.data = current_user.role
         form.about_me.data = current_user.about_me
     return render_template('edit_profile.html', title='Edit Profile',
                            form=form)

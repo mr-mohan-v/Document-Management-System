@@ -18,6 +18,18 @@
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
         </p>
+        <p class="login-form-field">
+            {{ form.role.label }}<br>
+            <select style="padding:0px 13vw 0px 0px;">
+                {% for role in roles %}
+                <option value="{{role}}" SELECTED>{{role}}</option>"
+                {% endfor %}<br>
+            </select>
+            {% for error in form.role.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+            
+        </p>
         <p class="login-form-field" placeholder="Password">
             {{ form.password.label }}<br>
             {{ form.password(size=32) }}<br>
