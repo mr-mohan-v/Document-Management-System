@@ -1,4 +1,3 @@
-
 from flask_wtf import FlaskForm
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, \
     Length
@@ -114,6 +113,11 @@ def before_request():
 @login_required
 def index():
     return render_template('index.html', title='Home')
+
+@app.route('/files/<filename>')
+@login_required
+def file(filename):
+    return render_template('files.html', title=filename, file=filename)
 
 
 @app.route('/login', methods=['GET', 'POST'])

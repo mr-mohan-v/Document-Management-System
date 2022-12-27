@@ -15,12 +15,12 @@
         <main id="main-holder">
             <h1 >Document Management System</h1>
             <nav class="nav-list">
-                <a  href="{{ url_for('index') }}">Home</a>
+                <a  class="nav-list" href="{{ url_for('index') }}">Home</a>
                 {% if current_user.is_anonymous %}
-                <a  href="{{ url_for('login') }}">Login</a>
+                <a  class="nav-list" href="{{ url_for('login') }}">Login</a>
                 {% else %}
-                <a  href="{{ url_for('user', username=current_user.username) }}">Profile</a>
-                <a  href="{{ url_for('logout') }}">Logout</a>
+                <a  class="nav-list" href="{{ url_for('user', username=current_user.username) }}">Profile</a>
+                <a  class="nav-list" href="{{ url_for('logout') }}">Logout</a>
                 {% endif %}
             </nav>
             <hr>

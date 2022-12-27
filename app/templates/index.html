@@ -2,4 +2,12 @@
 
 {% block content %}
     <h1>Hi, {{ current_user.username }}!</h1>
+    <h3>Document</h3>
+    <form action="" method="post" id="login-form" novalidate>
+    <form action="/action_page.php">
+        <label for="myfile">Select a file:</label>
+        <input type="file" id="myfile" name="myfile"><br><br>
+        <input type="submit">
+    </form>
+    <p>Open a PDF file : <a href="/files/19.pdf" target="_blank">example</a></p>    
 {% endblock %}
