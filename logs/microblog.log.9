@@ -1,0 +1,92 @@
+2023-01-03 09:46:25,102 ERROR: Exception on /user/thisuser [GET] [in C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\main\routes.py", line 95, in user
+    return render_template('user.html', user=user, posts=posts.items,
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\templates\base.html", line 53, in template
+    {% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endblock'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'.
+2023-01-03 09:46:26,033 ERROR: Exception on /user/thisuser [GET] [in C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\main\routes.py", line 95, in user
+    return render_template('user.html', user=user, posts=posts.items,
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\templates\base.html", line 53, in template
+    {% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endblock'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'.
+2023-01-03 09:46:26,826 ERROR: Exception on /user/thisuser [GET] [in C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\main\routes.py", line 95, in user
+    return render_template('user.html', user=user, posts=posts.items,
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\templates\base.html", line 53, in template
+    {% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endblock'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'.
+2023-01-03 09:46:59,367 INFO: DMS startup [in C:\Users\Mohan\Documents\DMS-0.22 - v5\app\__init__.py:88]
+2023-01-03 10:07:45,428 INFO: DMS startup [in C:\Users\Mohan\Documents\DMS-0.22 - v5\app\__init__.py:88]
+2023-01-03 10:09:00,621 INFO: DMS startup [in C:\Users\Mohan\Documents\DMS-0.22 - v5\app\__init__.py:88]
+2023-01-03 15:32:31,503 INFO: DMS startup [in C:\Users\Mohan\Documents\DMS-0.22 - v5\app\__init__.py:88]
+2023-01-03 17:00:45,656 INFO: DMS startup [in C:\Users\Mohan\Documents\DMS-0.22 - v5\app\__init__.py:88]

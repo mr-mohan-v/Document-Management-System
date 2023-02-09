@@ -1,0 +1,109 @@
+2023-01-07 21:56:26,054 ERROR: Exception on /documents [GET] [in C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\main\routes.py", line 108, in documents
+    form.approval_by_vao.data = posts.approval_by_vao
+AttributeError: 'BaseQuery' object has no attribute 'approval_by_vao'
+2023-01-07 22:06:56,244 INFO: DMS startup [in C:\Users\Mohan\Documents\DMS-0.22 - v5\app\__init__.py:88]
+2023-01-07 22:06:59,490 ERROR: Exception on /documents [GET] [in C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\main\routes.py", line 108, in documents
+    form.approval_by_vao.data = posts.approval_by_vao
+AttributeError: 'BaseQuery' object has no attribute 'approval_by_vao'
+2023-01-07 22:29:27,888 INFO: DMS startup [in C:\Users\Mohan\Documents\DMS-0.22 - v5\app\__init__.py:88]
+2023-01-07 22:37:06,800 INFO: DMS startup [in C:\Users\Mohan\Documents\DMS-0.22 - v5\app\__init__.py:88]
+2023-01-07 22:37:11,194 ERROR: Exception on /index [GET] [in C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\main\routes.py", line 54, in index
+    return render_template('index.html', title=_('Home'), form=form,
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\templates\index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 21, in block 'body'
+    {% block navbar %}
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\templates\base.html", line 23, in block 'navbar'
+    <li><a href="{{ url_for('main.documents') }}">{{ _('Documents') }}</a></li>
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.document'. Did you mean 'main.documents' instead?
+2023-01-07 22:39:45,816 INFO: DMS startup [in C:\Users\Mohan\Documents\DMS-0.22 - v5\app\__init__.py:88]
+2023-01-07 22:40:25,128 ERROR: Exception on /documents [GET] [in C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\main\routes.py", line 115, in documents
+    form.approval_by_vao.data = posts.approval_by_vao
+AttributeError: 'Pagination' object has no attribute 'approval_by_vao'
+2023-01-07 22:43:16,293 INFO: DMS startup [in C:\Users\Mohan\Documents\DMS-0.22 - v5\app\__init__.py:88]
+2023-01-07 22:43:20,536 ERROR: Exception on /documents [GET] [in C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\main\routes.py", line 121, in documents
+    return render_template('index.html', title=_('Documents'), posts=posts.items, next_url=next_url, prev_url=prev_url,  form= form)
+AttributeError: 'Post' object has no attribute 'items'
+2023-01-08 10:40:28,573 INFO: DMS startup [in C:\Users\Mohan\Documents\DMS-0.22 - v5\app\__init__.py:88]

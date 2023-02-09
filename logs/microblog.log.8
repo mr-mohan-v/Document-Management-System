@@ -1,0 +1,116 @@
+2023-01-03 17:00:49,202 ERROR: Exception on /user/thisuser [GET] [in C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1900, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: post.approval_by_vao
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\main\routes.py", line 87, in user
+    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_sqlalchemy\__init__.py", line 534, in paginate
+    items = self.limit(per_page).offset((page - 1) * per_page).all()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\query.py", line 2772, in all
+    return self._iter().all()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\query.py", line 2915, in _iter
+    result = self.session.execute(
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 1714, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1705, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\sql\elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1572, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1943, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 2124, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\compat.py", line 210, in raise_
+    raise exception
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1900, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: post.approval_by_vao
+[SQL: SELECT post.id AS post_id, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id, post.language AS post_language, post.approval_by_vao AS post_approval_by_vao, post.approval_by_ri AS post_approval_by_ri, post.approval_by_hqdt AS post_approval_by_hqdt, post."approval_by_Tahsildar" AS "post_approval_by_Tahsildar" 
+FROM post 
+WHERE ? = post.user_id ORDER BY post.timestamp DESC
+ LIMIT ? OFFSET ?]
+[parameters: (1, 25, 0)]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2023-01-03 17:01:15,246 INFO: DMS startup [in C:\Users\Mohan\Documents\DMS-0.22 - v5\app\__init__.py:88]
+2023-01-06 22:42:45,533 INFO: DMS startup [in C:\Users\Mohan\Documents\DMS-0.22 - v5\app\__init__.py:88]
+2023-01-06 23:33:29,329 INFO: DMS startup [in C:\Users\Mohan\Documents\DMS-0.22 - v5\app\__init__.py:88]
+2023-01-06 23:34:03,681 ERROR: Exception on /documents [GET] [in C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\main\routes.py", line 114, in documents
+    form.approval_by_vao.data = current_user.approval_by_vao
+AttributeError: 'User' object has no attribute 'approval_by_vao'
+2023-01-06 23:34:19,890 ERROR: Exception on /index [GET] [in C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\main\routes.py", line 54, in index
+    return render_template('index.html', title=_('Home'), form=form,
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\templates\index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block 'body'
+    {% block content -%}
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\templates\base.html", line 79, in block 'content'
+    {% block app_content %}{% endblock %}
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\templates\index.html", line 12, in block 'app_content'
+    {% include '_post.html' %}
+  File "C:\Users\Mohan\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Mohan\Documents\DMS-0.22 - v5\app\templates\_post.html", line 23, in template
+    <p> {{approval_by_vao}} - by VAO       Reason : {{}}</p>
+jinja2.exceptions.TemplateSyntaxError: Expected an expression, got 'end of print statement'
+2023-01-06 23:35:20,234 INFO: DMS startup [in C:\Users\Mohan\Documents\DMS-0.22 - v5\app\__init__.py:88]

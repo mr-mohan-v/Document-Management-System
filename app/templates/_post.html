@@ -1,6 +1,28 @@
-    <table>
-        <tr valign="top">
-            <td><img src="{{ post.author.avatar(36) }}"></td>
-            <td>{{ post.author.username }} says:<br>{{ post.body }}</td>
+    <table class="table table-hover">
+        <tr>
+            <td>
+                {% set user_link %}
+                    <span class="user_popup">
+                        <a href="{{ url_for('main.user', username=post.author.username) }}">
+                            {{ post.author.username }}
+                        </a>
+                    </span>
+                {% endset %}
+                {{ _('%(username)s posted a document %(when)s',
+                    username=user_link, when=moment(post.timestamp).fromNow()) }}
+                <br>
+                <a href = "/download/{{ post.body }}" target="_blank">
+                    <span id="post{{ post.id }}">{{ post.body }}</span>
+                </a>
+                <br>
+                <p> {{post.approval_by_vao}} - by VAO   </p>
+                <p> Reason :  {{post.reason_by_vao}}</p>
+                <p> {{post.approval_by_ri}} - by RI      </p>
+                <p> Reason :  {{post.reason_by_ri}}</p>
+                <p> {{post.approval_by_hqdt}} - by HQDT  </p>
+                <p> Reason :  {{post.reason_by_hqdt}}</p>
+                <p> {{post.approval_by_Tahsildar}} - by Tahsildar</p>
+                <p> Reason :  {{post.reason_by_Tahsildar}}</p>
+            </td>
         </tr>
     </table>

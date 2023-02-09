@@ -1,0 +1,14 @@
+<table class="table">
+    <tr>
+        <td style="border: 0px;">
+            <p><a href="{{ url_for('main.user', username=user.username) }}">{{ user.username }}</a></p>
+            <small>
+                {% if user.about_me %}<p>{{ user.about_me }}</p>{% endif %}
+                {% if user.last_seen %}
+                <p>{{ _('Last seen on') }}: {{ moment(user.last_seen).format('lll') }}</p>
+                {% endif %}
+                <p>Position : {{ user.role}}</p>
+            </small>
+        </td>
+    </tr>
+</table>
