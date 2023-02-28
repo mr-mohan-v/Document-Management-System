@@ -2,6 +2,7 @@
 <br/>
 Tools : Flask, Jinja, SQL Alchemy, Python
 <br/>
+
 # Primitive Process:
 <br/>			All the Institutes/ Departments under the Ministry are using some common file/document movement and approval procedures. The physical movement of such files/ documents has many disadvantages. 
 <br/>			When a document file is under process of approval, the location of the file document where it has been delayed on the way while moving from table to table, is very difficult to trace. The status of a document/ file which has been initiated is not traceable until it returns back to the parent section/ Office.  
