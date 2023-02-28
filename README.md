@@ -12,9 +12,9 @@ Tools : Flask, Jinja, SQL Alchemy, Python, HTML, CSS, JS
 <br/>
 
 # Object Model: 
-<br/>   Web server based on Flask
-<br/>   Template engine based on Jinja
-<br/>   Database integration based on SQL Alchemy
+<br/>   -Web server based on Flask
+<br/>   -Template engine based on Jinja
+<br/>   -Database integration based on SQL Alchemy
 
 
 <br/>
