@@ -1,5 +1,8 @@
 # Document-Management-System
 <br/>
+To execute: Run dms.py and copy paste the address in browser
+<br/>
+<br/>
 Tools : Flask, Jinja, SQL Alchemy, Python, HTML, CSS, JS
 <br/>
 
