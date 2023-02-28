@@ -1,6 +1,6 @@
 # Document-Management-System
 <br/>
-Tools : Flask, Jinja, SQL Alchemy, Python
+Tools : Flask, Jinja, SQL Alchemy, Python, HTML, CSS, JS
 <br/>
 
 # Primitive Process:
